@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>自制搜索引擎</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #d0e4fe;
+        }
+
+        h1 {
+            color: orangered;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        h1:hover {
+            color: purple;
+        }
+    </style>
+    <h1>邢栋的搜索引擎</h1>
+    <form name="f" id="form" action="/s" class="fm" onsubmit="javascript:F.call('ps/sug','pssubmit');" <span
+        id="s_kw_wrap" class="bg s_ipt_wr quickdelete-wrap"><span class="soutu-btn"></span><input type="text"
+            class="s_ipt" name="wd" id="kw" maxlength="100" autocomplete="off"><a href="javascript:;" id="quickdelete"
+            title="清空" class="quickdelete" style="top: 0px; right: 0px; display: none;"></a><span
+            class="soutu-hover-tip" style="display: none;">按图片搜索</span></span><input type="hidden" name="rsv_spt"
+            value="1"><input type="hidden" name="rsv_iqid" value="0xc009bb5800013207"><input type="hidden" name="issp"
+            value="1"><input type="hidden" name="f" value="8"><input type="hidden" name="rsv_bp" value="1"><input
+            type="hidden" name="rsv_idx" value="2"><input type="hidden" name="ie" value="utf-8"><input type="hidden"
+            name="rqlang" value=""><input type="hidden" name="tn" value="baiduhome_pg"><input type="hidden" name="ch"
+            value=""><span class="btn_wr s_btn_wr bg" id="s_btn_wr"><input type="submit" value="搜索一下" id="su"
+                class="btn self-btn bg s_btn"></span><span class="tools"><span id="mHolder">
+            </span><span class="bd_bear_home"></span></span><input type="hidden" name="rsv_enter" value="1"><input
+            type="hidden" name="rsv_dl" value="ib"><input type="hidden" name="rsv_sug3" value="1"></form>
+</body>
+
+</html>
