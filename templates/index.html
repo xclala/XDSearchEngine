@@ -13,16 +13,23 @@
         }
 
         h1 {
-            color: orangered;
+            color: #f35626;
+            animation: hue 5s infinite linear;
             text-align: center;
+        }
+
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(360deg);
+            }
         }
 
         form {
             text-align: center;
-        }
-
-        h1:hover {
-            color: purple;
         }
     </style>
     <h1>邢栋的搜索引擎</h1>
