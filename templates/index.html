@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>自制搜索引擎</title>
+    <title>邢栋的搜索引擎</title>
+    <link rel="icon" type="image/x-ico" href="https://xclala.github.io/favicon.ico">
 </head>
 
 <body>
@@ -33,16 +34,17 @@
         }
     </style>
     <h1>邢栋的搜索引擎</h1>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-        function light() {
-            document.body.style.backgroundColor = "#d0e4fe"
-        }
-        function dark(){
-            document.body.style.backgroundColor = "black"
-        }
+        $(document).ready(function () {
+            var bg = ['black', 'white', '#d0e4fe']
+            var c = 0
+            $("h1").click(function () {
+                $("body").css("background", bg[c % 3])
+                c++
+            })
+        })
     </script>
-    <button type="button" onclick="light()">浅色模式</button>
-    <button type="button" onclick="dark()">深色模式</button>
     <form name="f" id="form" action="/s" class="fm" onsubmit="javascript:F.call('ps/sug','pssubmit');" <span
         id="s_kw_wrap" class="bg s_ipt_wr quickdelete-wrap"><span class="soutu-btn"></span><input type="text"
             class="s_ipt" name="wd" id="kw" maxlength="100" autocomplete="off"><a href="javascript:;" id="quickdelete"
