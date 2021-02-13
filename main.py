@@ -10,4 +10,8 @@ def home_page():
 @app.route('/s')
 def search():
     from spider import info
-    return info(request.args.get('wd'))
+    word = request.args.get('wd')
+    if word is not None:
+        return info(word)
+    else:
+        return " "
