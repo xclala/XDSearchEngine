@@ -1,7 +1,10 @@
 def info(keywd):
     from requests import get
-    req = get(f'https://www.baidu.com/s?ie=UTF-8&wd={keywd}', headers={
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36', 'Referer':'https://www.baidu.com'}).text
+    from headers import headers
+    r = get(
+        f'https://www.baidu.com/s?ie=UTF-8&wd={keywd}', headers=headers())
+    r.encoding = 'utf-8'
+    req = r.text
     req = req.replace(
         '<img class="index-logo-src" src="" alt="到百度首页" title="到百度首页">', '')
     req = req.replace(

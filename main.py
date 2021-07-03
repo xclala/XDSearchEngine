@@ -14,4 +14,4 @@ def search():
     if word is not None:
         return info(word)
     else:
-        return " "
+        return "<h1>未搜到结果</h1>"
